@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class TriangleCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int base = scanner.nextInt();
+        int height = scanner.nextInt();
+        int side1 = scanner.nextInt();
+        int side2 = scanner.nextInt();
+        int side3 = scanner.nextInt();
+        double area = 0.5 * base * height;
+
+        double perimeter = side1 + side2 + side3;
+
+        System.out.printf("Area of Triangle is %.2f\n", area);
+        System.out.printf("Perimeter of Triangle is %.2f\n", perimeter);
+
+        scanner.close();
+    }
+}
