@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        float floatValue=sc.nextFloat();
+        int squareValue=sc.nextInt();
+        int base=sc.nextInt();
+        int exponent=sc.nextInt();
+        int floorValue=(int)Math.floor(floatValue);
+        int ceilValue=(int)Math.ceil(floatValue);
+        int sqrtValue=(int)Math.sqrt(squareValue);
+        int powerValue=(int)Math.pow(base,exponent);
+        System.out.println(floorValue);
+        System.out.println(ceilValue);
+        System.out.println(sqrtValue);
+        System.out.println(powerValue);
+    }
+}
