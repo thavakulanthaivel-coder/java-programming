@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class ATM {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int balance = scanner.nextInt();    
+        int option = scanner.nextInt();    
+
+        switch(option) {
+            case 1: 
+                int depositAmount = scanner.nextInt();
+                balance += depositAmount;
+                System.out.println(balance);
+                break;
+            case 2: 
+                int withdrawAmount = scanner.nextInt();
+                if (withdrawAmount <= balance) {
+                    balance -= withdrawAmount;
+                    System.out.println(balance);
+                } else {
+                    System.out.println("Insufficient Balance");
+                }
+                break;
+
+            default:
+                System.out.println("Invalid Input");
+        }
+
+        scanner.close();
+    }
+}
