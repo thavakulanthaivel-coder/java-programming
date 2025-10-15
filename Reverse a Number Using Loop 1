@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class ReverseNumber {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        long num = scanner.nextLong();
+        scanner.close();
+        if (num <= 0 || num > 1000000000) {
+            System.out.println("Invalid Input");
+            return;
+        }
+        long reversed = 0;
+        long temp = num;
+        while (temp > 0) {
+            long digit = temp % 10;
+            reversed = reversed * 10 + digit;
+            temp /= 10;
+        }
+        System.out.println(reversed);
+    }
+}
