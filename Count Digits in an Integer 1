@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class DigitCounter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        if (input.matches("\\d+")) {
+            long num = Long.parseLong(input);
+            if (num >= 1 && num <= 9999999) {
+                System.out.println("The count of the given integer is: " + input.length());
+            } else {
+                System.out.println("Enter a Valid Input");
+            }
+        } else {
+            System.out.println("Enter a Valid Input");
+        }
+    scanner.close();
+    }
+}
